@@ -1,11 +1,11 @@
 import React from "react";
 import styles from "./locationField.module.css";
 
-const LocationField = ({ topText, bottomText }) => {
+const LocationField = () => {
 	return (
 		<div className={`${styles.wrapper}`}>
-			<p className={`${styles.topText}`}>{topText}</p>
-			<p className={`${styles.bottomText}`}>{bottomText}</p>
+			<p className={`${styles.topText}`}>Cite La paza, Malingo</p>
+			<p className={`${styles.bottomText}`}>Buea</p>
 		</div>
 	);
 };
