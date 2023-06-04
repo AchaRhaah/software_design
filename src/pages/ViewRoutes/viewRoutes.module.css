@@ -1,0 +1,33 @@
+.text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    
+    /* primary-black */
+    
+    color: #2A2A2A;
+}
+
+.topCard{
+width: 364px;
+height: 169px;
+padding: 0.8rem;
+background: rgba(142, 187, 57, 0.1);
+border-radius: 12px;
+}
+
+.pageWrapper{
+background: #FFFFFF;
+border-radius: 18px;
+padding: 1rem;
+display: flex;
+flex-direction: column;
+justify-content: space-between;
+width: 428px;
+height: 926px;
+}
