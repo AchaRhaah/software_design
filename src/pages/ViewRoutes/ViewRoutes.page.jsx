@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import React from "react";
 import styles from "./viewRoutes.module.css";
-import { LocationField, PrimaryButton, Tabs } from "../../components";
+import { LocationField, PrimaryButton, Tabs, Footer } from "../../components";
 import arrowBack from "../../assets/bi_arrow-left.svg";
 
 const ViewRoutes = () => {
@@ -12,10 +12,9 @@ const ViewRoutes = () => {
 		{ top: "Bla bla bla", bottom: "Douala" },
 	];
 
-	const [isActive, setIsActive] = useState(false);
 	return (
 		<section className={`${styles.pageWrapper}`}>
-			<img className={`${styles.backArrow}`} src={arrowBack} />
+			<img className={`${styles.backArrow}`} src={arrowBack} alt="" />
 			<div className={`${styles.topCard}`}>
 				<p className={`${styles.text}`}>
 					Blanco Disposal <br /> Services
@@ -36,6 +35,7 @@ const ViewRoutes = () => {
 						"Sunday",
 					]}
 					activeTab={2}
+					setActiveTab={""}
 				/>
 				{texts.map((item, index) => {
 					return (
@@ -47,6 +47,7 @@ const ViewRoutes = () => {
 					);
 				})}
 			</div>
+			<Footer />
 		</section>
 	);
 };
