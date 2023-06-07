@@ -14,11 +14,15 @@
 }
 
 .topCard{
-width: 364px;
-height: 169px;
+width: 340px;
+height: 160px;
 padding: 0.8rem;
 background: rgba(142, 187, 57, 0.1);
 border-radius: 12px;
+display: flex;
+flex-direction: column;
+justify-content: space-around;
+justify-self: center;
 }
 
 .pageWrapper{
@@ -27,7 +31,23 @@ border-radius: 18px;
 padding: 1rem;
 display: flex;
 flex-direction: column;
-justify-content: space-between;
-width: 428px;
-height: 926px;
+gap: 4vh;
+width: 99vw;
+height: 100vh;
+}
+
+.btnWrapper{
+width: 164px;
+height: 40px;
+align-self: self-end;
+}
+.tabContainer{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.backArrow{
+    width: 25px;
+    height: 25px;
 }
