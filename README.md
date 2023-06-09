@@ -1,70 +1,59 @@
-# Getting Started with Create React App
+# Trowey - A Waste Management Software
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Design Overview
 
-## Available Scripts
+![Trowey designs](./designs/overview.png)
 
-In the project directory, you can run:
+The designing was done using Figma. Using the modular approach, smaller components were first built and then 
+integrated to form the larger components. These components included buttons, navigation bars, built icons frames 
+and menus.
 
-### `npm start`
+### Modular Components
+![Modular components](./designs/components1.png)  ![Modular components](./designs/components2.png)
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Implementation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+### General Actions
 
-### `npm test`
+![General Actions](./designs/general.png)
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+These are screens that would be accessed by both waste collectors and customers. They include:
+    - The splash screen
+    - Login Screen (Logging in with google and with password)
+    - The Signup screen
 
-### `npm run build`
+The user would be able to login with their phone number and password or by using google or facebook authentication 
+methods however, this has not been implemented in the current project.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The user should also be able to signup by providing the required user information. 
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Upon signing in or signup up, the user can select if they are a Waste Collector,, if not, they'll be treated like 
+Customers and would be limited to the interactions of customers.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
 
-### `npm run eject`
+### Customer Actions
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+![Customer Actions](./designs/customer.png)
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+When the customer logs in, they'll be able to view all Collectors and have the possibility of searching for collectors 
+by location. The base unit element of this page would be the Collector and each collector would have a name displayed.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Clicking on a collector would display their routes for each day of the week. Also, the customer should be able to 
+subscribe or unsubscibe to a collector by clicking on the Subscribe or Unsubscribe button. If the customer is currently
+subscribed, the Unsubscribe button shows, and vice versa.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+The customer can also request a Pickup for waste by a particular waste collector by selecting the Collector, inputting the
+location and then then making a payment.
 
-## Learn More
+The screens that have been implemented for this customer is the Dashboard screen and the View Routes screen.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Collector Actions
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Collector Actions](./designs/collector.png)
 
-### Code Splitting
+Once the collector has signed in, they would be able to see Pickup requests that are pending, accepted or declined. 
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+The collector mainly has to be able to publish their routes. This is done by simply selecting the tab that represents the day 
+for which they want to add a collection point for and selecting the location. 
 
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+These added routes can also be edited or deleted.
