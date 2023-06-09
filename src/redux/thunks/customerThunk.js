@@ -4,11 +4,27 @@ import { Post } from "../../api/api";
 
 export const addCustomerThunk = createAsyncThunk(
     'customers/addNew',
-    async (customerDetails) => {
+    async (userDetails) => {
         try {
-            const resCustomer = await Post.addCustomer({customer: customerDetails});
+            const location_details = userDetails.location;
+            delete userDetails.location;
+            const resLoc = await Post.addLocation({ location: location_details});
+            if(!resLoc.insert_Location_one){
+                throw new Error()
+            }
+            const location_id = resLoc.insert_Location_one.location_id;
+            const userToSend = {...userDetails, address: location_id};
+            delete userToSend.location;
+            delete userToSend.email;
+            const resUser = await Post.addUser({user: userToSend});
+            if(!resUser.insert_user_one){
+                throw new Error()
+            }
+            const user = resUser.insert_user_one;
+
+            const resCustomer = await Post.addCustomer({customer: {user_id: user.user_id}});
             if(!resCustomer.insert_customer_one) throw new Error();
-            const customer = resCustomer.insert_customer_one.customer;
+            const customer = resCustomer.insert_customer_one;
 
             return customer;
         } catch {

@@ -4,11 +4,26 @@ import { Post } from "../../api/api";
 
 export const addCollectorThunk = createAsyncThunk(
     'collectors/addNew',
-    async (collectorDetails) => {
+    async (userDetails) => {
         try {
-            const resCollector = await Post.addCollector({collector: collectorDetails});
+            const location_details = userDetails.location;
+            delete userDetails.location;
+            const resLoc = await Post.addLocation({ location: location_details});
+            if(!resLoc.insert_Location_one){
+                throw new Error()
+            }
+            const location_id = resLoc.insert_Location_one.location_id;
+            const userToSend = {...userDetails, address: location_id};
+            delete userToSend.location;
+            delete userToSend.email;
+            const resUser = await Post.addUser({user: userToSend});
+            if(!resUser.insert_user_one){
+                throw new Error()
+            }
+            const user = resUser.insert_user_one;
+            const resCollector = await Post.addCollector({collector: {user_id: user.user_id}});
             if(!resCollector.insert_collector_one) throw new Error();
-            const collector = resCollector.insert_collector_one.collector;
+            const collector = resCollector.insert_collector_one;
 
             return collector;
         } catch {

@@ -7,6 +7,7 @@ export const addUserThunk = createAsyncThunk(
     async (userDetails) => {
         try {
             const location_details = userDetails.location;
+            delete userDetails.location;
             const resLoc = await Post.addLocation({ location: location_details});
             if(!resLoc.insert_Location_one){
                 throw new Error()
