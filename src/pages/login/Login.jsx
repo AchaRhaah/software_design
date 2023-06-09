@@ -16,7 +16,7 @@ import { setLoading } from "../../redux/reducers/loaderReducer";
 import { addCustomerThunk } from "../../redux/thunks/customerThunk";
 import { addCollectorThunk } from "../../redux/thunks/collectorsThunk";
 
-function CreateAcc() {
+function Login() {
   const navigate = useNavigate();
   const dispatch = useDispatch();
 
@@ -29,6 +29,7 @@ function CreateAcc() {
       const isCollector = userDetails.isCollector;
       delete userDetails.address;
       delete userDetails.isCollector
+      console.log('Here')
       if(isCollector){
         dispatch(addCollectorThunk(userDetails)).then(() => {
           dispatch(setLoading(false))
@@ -52,18 +53,16 @@ function CreateAcc() {
       </div>
       <div className={styles.image}>
         <div className={styles.textOverlay}>
-          <p>Create your</p>
-          <p>Account</p>
+          <p>Login to</p>
+          <p>Your Account</p>
         </div>
       </div>
       <div className={styles.inputContainer}>
         <PhoneInput value={userDetails.phone_number} setValue={(val) => setUserDetails((u) => ({...u, phone_number: val}))}/>
         <PasswordInput value={userDetails.password} setValue={(val) => setUserDetails((u) => ({...u, password: val}))}/>
-        <TextInput placeholder={'Full Name'} value={userDetails.name} setValue={(val) => setUserDetails((u) => ({...u, name: val}))}/>
-        <TextInput placeholder={'Address'} value={userDetails.address} setValue={(val) => setUserDetails((u) => ({...u, address: val}))}/>
       </div>
       <Checkboxes isCollector={userDetails.isCollector} setValue={(val) => setUserDetails((u) => ({...u, isCollector: val}))} />
-      <GreenBtn text={"Sign up"} onPress={register}/>
+      <GreenBtn text={"Log in"} onPress={register}/>
       <div className={styles.line}>
         <div className={styles.subline} />
         <p className={styles.or}>or contine with</p>
@@ -74,10 +73,10 @@ function CreateAcc() {
         <SocialSquareBtn facebook={false} />
       </div>
       <p className={styles.name}>
-        Already have an account? <Link className={styles.signUp} to="/login"> Log in</Link>
+        Don't have an account? <Link className={styles.signUp} to="/create-account"> Sign Up</Link>
       </p>
     </div>
   );
 }
-export default CreateAcc;
+export default Login;
 

@@ -1,6 +1,6 @@
 .btnContainer{
     width: 85%;
-    height: 3.5rem;
+    min-height: 3rem;
     border-radius: 4rem;
     background: var(--green-light);
     color: #fff;
