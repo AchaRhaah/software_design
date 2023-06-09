@@ -4,6 +4,8 @@ import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { SocialBtn, GreenBtn } from "../../components";
+import Footer from "../../components/footer/Footer";
+import CollectorGrid from "../../components/collector-grid/CollectorGrid";
 
 function LetsGo() {
   const navigate = useNavigate();
@@ -11,6 +13,7 @@ function LetsGo() {
     navigate("/create-account");
   };
   return (
+    <>
     <div className={styles.mainContainer}>
       <div className={styles.header}>
         <Link to="/">
@@ -33,6 +36,7 @@ function LetsGo() {
         Don't have an account? <Link className={styles.signUp}> Sign up</Link>
       </p>
     </div>
+      </>
   );
 }
 export default LetsGo;
