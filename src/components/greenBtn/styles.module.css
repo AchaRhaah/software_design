@@ -1,0 +1,10 @@
+.btnContainer{
+    width: 85%;
+    height: 3.5rem;
+    border-radius: 4rem;
+    background: var(--green-light);
+    color: #fff;
+    font-weight: 500;
+    font-size: 1rem;
+    border: none;
+}
