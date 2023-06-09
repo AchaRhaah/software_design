@@ -1,0 +1,38 @@
+.body {
+    width: 100%;
+    display: flex;
+    gap: 0;
+    align-items: center;
+    max-width: 100%;
+    overflow-x: scroll;
+    position: relative;
+}
+
+.body::-webkit-scrollbar {
+  width: 0px;  
+  display: none;  
+}
+
+.tab {
+    cursor: pointer;
+    padding: 0.2rem 0.5rem;
+    font-weight: 400;
+    font-size: 14px;
+    color: #9E9E9E;
+    border-bottom: 2px solid #9E9E9E;
+    border-radius: 6px;
+}
+
+.active {
+    border-bottom: 2px solid #8EBB39;
+    color: #8EBB39; 
+    font-weight: 500;
+}
+
+.arrow {
+    position: absolute;
+    right: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #D4D4D4;
+}

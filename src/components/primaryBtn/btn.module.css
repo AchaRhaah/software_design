@@ -1,0 +1,14 @@
+.btnContainer{
+    min-width: 164px;
+    padding: 0.25rem 0.5rem;
+    border-radius: 6px;
+    background: var(--green-light);
+    color: #fff;
+    font-weight: 600;
+    font-size: 1rem;
+    border: none;
+}
+
+.btnContainer:disabled {
+    background: #DADADA;
+}
