@@ -1,0 +1,25 @@
+.checkbox{
+    width: 1.3rem;
+    height: 1.3rem;
+    background-color: var(--green-light);
+}
+/* .checkbox[type=chckbox]:checked{
+  background-color: var(--green-light);
+} */
+.checkboxCotainer{
+    width: 100%;
+    height: 4rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+.checkContainer{
+    display: flex;
+    gap: 0.3rem;
+}
+
+input[type=checkbox] {
+    accent-color: var(--green-light);
+
+}
