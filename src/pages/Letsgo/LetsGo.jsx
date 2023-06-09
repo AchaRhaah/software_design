@@ -36,7 +36,7 @@ function LetsGo() {
         Don't have an account? <Link className={styles.signUp}> Sign up</Link>
       </p>
     </div>
-      </>
+    </>
   );
 }
 export default LetsGo;
