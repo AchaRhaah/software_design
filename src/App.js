@@ -11,9 +11,9 @@ function App() {
 					<Route path="/" exact element={<Welcome />} />
 					<Route path="/letsGo" exact element={<LetsGo />} />
 					<Route path="/create-account" exact element={<CreateAcc />} />
-					<Route path="/view-routes" exact element={<ViewRoutes />} />
 				</Routes>
 			</BrowserRouter>
+			<Loader />
 		</div>
 	);
 }
