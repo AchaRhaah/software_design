@@ -5,6 +5,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
 import { SocialBtn, GreenBtn } from "../../components";
 import Footer from "../../components/footer/Footer";
+import CollectorGrid from "../../components/collector-grid/CollectorGrid";
 
 function LetsGo() {
   const navigate = useNavigate();
@@ -35,7 +36,7 @@ function LetsGo() {
         Don't have an account? <Link className={styles.signUp}> Sign up</Link>
       </p>
     </div>
-    </>
+      </>
   );
 }
 export default LetsGo;

@@ -13,7 +13,7 @@ const CollectorCard = ({name, collector_id}) => {
 
     const images = [trash1, trash2, trash3, trash4];
 
-    const image = images[(Math.random()*10)%4]
+    const image = images[(Math.round(Math.random()*10)%4)]
 
   return (
     <div className={styles.body} onClick={() => navigate(`/collector/${collector_id}`)}>
