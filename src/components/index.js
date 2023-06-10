@@ -5,3 +5,8 @@ export { default as PasswordInput } from "./passwordInput/PasswordInput";
 export { default as Checkboxes } from "./checkboxes/Checkbox";
 export { default as SocialSquareBtn } from "./socialSquareButton/SocialSqureBtn";
 export { default as Tabs } from "./tabs/Tabs";
+export { default as Cards } from "./card/CollectorCard";
+export { default as CardsGrid } from "./collector-grid/CollectorGrid";
+export { default as RouteCard } from "./routesCard/RouteCard";
+export { default as Footer } from "./footer/Footer";
+export { default as SelectLocation } from "./selectLocation/SelectLocation";
