@@ -1,0 +1,13 @@
+.btnContainer{
+    width: 85%;
+    height: 3rem;
+    border-radius: 0.7rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #DADADA;
+}
+.btnText{
+ font-weight: 600;
+ font-size: 1rem;
+}
