@@ -1,0 +1,32 @@
+.mainContainer{
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.heading1{
+    padding-top: 3rem;
+    font-size: 2rem;
+    font-weight: 500;
+}
+.img{
+    width: 100%;
+    height: 55%;
+    background-image: url('../../assets/welcome.png');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.heading2{
+  color: var(--foundation-green);
+  font-weight: 700;
+}
+.heading3{
+    color: var(--green-light);
+    font-size: 1.2em;
+}
+.arrowRight{
+    margin-top: 2rem;
+    font-size: 2.5rem;
+}
