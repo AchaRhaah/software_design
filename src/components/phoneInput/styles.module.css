@@ -1,0 +1,23 @@
+.inputContainer{
+    width: 80%;
+    height: 3rem;
+    background: #FAFAFA;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 0.3rem;
+    border-radius: 1rem;
+}
+.countryCode{
+    font-size:0.9rem;
+    color: #949393;
+}
+input{
+     background: #FAFAFA;
+     width: 75%;
+    border: none;
+    outline: none;
+    color: #949393;
+    font-size:0.9rem;
+
+}

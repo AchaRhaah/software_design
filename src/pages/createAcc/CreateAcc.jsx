@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { Link, useNavigate } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
-import { SocialBtn, GreenBtn } from "../../components";
+import { PasswordInput, PhoneInput } from "../../components";
 
 function LetsGo() {
   const navigate = useNavigate();
@@ -17,20 +17,16 @@ function LetsGo() {
           <FontAwesomeIcon className={styles.arrowLeft} icon={faArrowLeft} />
         </Link>
       </div>
-      <div className={styles.image}></div>
-      <h2>Lets get in</h2>
-      <div className={styles.socialBtnContainer}>
-        <SocialBtn facebook={true} />
-        <SocialBtn facebook={false} />
+      <div className={styles.image}>
+        <div className={styles.textOverlay}>
+          <p>Create your</p>
+          <p>Account</p>
+        </div>
       </div>
-      <div className={styles.line}>
-        <div className={styles.subline} />
-        <p className={styles.or}>or</p>
-        <div className={styles.subline} />
-      </div>
-      <GreenBtn onPress={onBtnPress} text={"Sign in with password"} />
+      <PhoneInput />
+      <PasswordInput />
       <p className={styles.name}>
-        Don't have an account? <Link className={styles.signUp}> Sign up</Link>
+        Already have an account? <Link className={styles.signUp}> Log in</Link>
       </p>
     </div>
   );
