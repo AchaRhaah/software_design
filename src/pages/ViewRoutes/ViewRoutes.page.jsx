@@ -1,6 +1,6 @@
 import React from "react";
 import styles from "./viewRoutes.module.css";
-import { LocationField, PrimaryButton, Tabs, Footer } from "../../components";
+import { LocationField, Tabs, Footer, TopCard } from "../../components";
 import arrowBack from "../../assets/bi_arrow-left.svg";
 
 const ViewRoutes = () => {
@@ -12,17 +12,11 @@ const ViewRoutes = () => {
 		{ top: "Bla bla bla", bottom: "Douala" },
 	];
 
+	const header = {text: "Blanco Disposal Services", buttonText:"Subscribe", buttonDisabled:false}
 	return (
 		<section className={`${styles.pageWrapper}`}>
 			<img className={`${styles.backArrow}`} src={arrowBack} alt="" />
-			<div className={`${styles.topCard}`}>
-				<p className={`${styles.text}`}>
-					Blanco Disposal <br /> Services
-				</p>
-				<div className={`${styles.btnWrapper}`}>
-					<PrimaryButton text={"Subscribe"} disabled={false} />
-				</div>
-			</div>
+			<TopCard text={header.text} buttonText={header.buttonText} buttonDisabled={header.buttonDisabled}/>
 			<div className={`${styles.tabContainer}`}>
 				<Tabs
 					tabs={[

@@ -12,3 +12,5 @@ export { default as CardsGrid } from "./collector-grid/CollectorGrid";
 export { default as RouteCard } from "./routesCard/RouteCard";
 export { default as Footer } from "./footer/Footer";
 export { default as SelectLocation } from "./selectLocation/SelectLocation";
+export {default as TopCard} from "./top_card/TopCard";
+export { default as Search } from "./search/Search";
