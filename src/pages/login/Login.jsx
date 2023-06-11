@@ -13,8 +13,8 @@ import {
 import TextInput from "../../components/TextInput/TextInput";
 import { useDispatch } from "react-redux";
 import { setLoading } from "../../redux/reducers/loaderReducer";
-import { addCustomerThunk } from "../../redux/thunks/customerThunk";
-import { addCollectorThunk } from "../../redux/thunks/collectorsThunk";
+import { addCustomerThunk, loginCustomer } from "../../redux/thunks/customerThunk";
+import { addCollectorThunk, loginCollector } from "../../redux/thunks/collectorsThunk";
 
 function Login() {
   const navigate = useNavigate();
@@ -22,20 +22,22 @@ function Login() {
 
   const [userDetails, setUserDetails] = useState({});
 
-  const register = async () => {
+  const login = async () => {
     dispatch(setLoading(true));
     try{
-      userDetails.location = {name: userDetails.address};
       const isCollector = userDetails.isCollector;
-      delete userDetails.address;
-      delete userDetails.isCollector
-      console.log('Here')
       if(isCollector){
-        dispatch(addCollectorThunk(userDetails)).then(() => {
+        dispatch(loginCollector(userDetails)).then((res) => {
+          if(res.payload.status === 400){
+            alert('Wrong Credentials');
+          }else{
+            navigate('/publish-routes')
+          }
+          console.log('Res', res);
           dispatch(setLoading(false))
         })
       }else{
-        await dispatch(addCustomerThunk(userDetails)).then(() => {
+        await dispatch(loginCustomer(userDetails)).then(() => {
           dispatch(setLoading(false))
         })
       }
@@ -62,7 +64,7 @@ function Login() {
         <PasswordInput value={userDetails.password} setValue={(val) => setUserDetails((u) => ({...u, password: val}))}/>
       </div>
       <Checkboxes isCollector={userDetails.isCollector} setValue={(val) => setUserDetails((u) => ({...u, isCollector: val}))} />
-      <GreenBtn text={"Log in"} onPress={register}/>
+      <GreenBtn text={"Log in"} onPress={login}/>
       <div className={styles.line}>
         <div className={styles.subline} />
         <p className={styles.or}>or contine with</p>
