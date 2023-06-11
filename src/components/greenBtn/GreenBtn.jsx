@@ -1,8 +1,13 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./styles.module.css";
-function GreenBtn({ text, onPress }) {
+function GreenBtn({ text, link }) {
+  const navigate = useNavigate();
   return (
-    <button onPress={onPress} className={styles.btnContainer}>
+    <button
+      onClick={() => navigate(`/${link}`)}
+      className={styles.btnContainer}
+    >
       {text}
     </button>
   );

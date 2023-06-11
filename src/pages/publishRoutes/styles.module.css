@@ -1,6 +1,10 @@
 .mainContainer{
-    width: 100%;
+    width: 100vw;
     height: 100vh;
+}
+.container{
+    width: 100vw;
+    height: 90%;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -24,6 +28,13 @@
 }
 .heading{
     margin-left: 1rem;
+}
+.routeCard{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    padding-left: 1rem;
+    gap: 0.7rem;
 }
 .savedRoutes{
     color: var(--green-light);
