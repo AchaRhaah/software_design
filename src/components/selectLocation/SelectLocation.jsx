@@ -1,18 +1,32 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./styles.module.css";
 
-function SelectLocation() {
+function SelectLocation({ addLocation }) {
+  const [name, setName] = useState('');
+
+  const saveAndClear = () => {
+    addLocation(name);
+    setName('');
+  }
+
   return (
     <div className={styles.mainContainer}>
       <div className={styles.topContainer}>
-        <h5 className={styles.selectLocation}>Select Location</h5>
+        <h5 className={styles.selectLocation}>Add Location</h5>
         <input
           className={styles.input}
-          placeholder="Kiki mini cite malingo Buea"
+          placeholder="e.g. Kiki mini cite Malingo Buea"
           type="text"
+          value={name}
+          onChange={(e) => setName(e.target.value)}
+          onKeyDown={(e) => {
+            if(e.keyCode === 13){
+              saveAndClear()
+            }
+          }}
         />
       </div>
-      <button className={styles.savedBtn}>Saved</button>
+      <button className={styles.savedBtn} onClick={saveAndClear}>Add</button>
     </div>
   );
 }

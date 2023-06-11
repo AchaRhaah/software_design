@@ -27,6 +27,7 @@ export const Post = {
     getAllCollectors: () => requests.get(`collectors/get`),
     getCollectorByID: (id) => requests.get(`collector/${id}/getByID`),
     getCustomerSubscriptions: (custID) => requests.get(`customer/${custID}/subscriptions/get`),
+    getCollectorRoutes: (id) => requests.get(`collector/${id}/routes`),
 
     addCollectionPoint: (data) => requests.post(`collector/points/add`, data),
     addRoute: (data) => requests.post(`collector/routes/add`, data),
@@ -39,4 +40,6 @@ export const Post = {
 
     loginCustomer: (data) => requests.post(`customer/login`, data),
     loginCollector: (data) => requests.post(`collector/login`, data),
+
+    deleteCollectorLocations: (data) => requests.post(`collector/locations/delete`, data)
 }

@@ -7,25 +7,48 @@ import Book from "../../assets/icons/Book.icon";
 import Info from "../../assets/icons/Info.icon";
 import Phone from "../../assets/icons/Phone.icon";
 
-const Footer = () => {
+const Footer = ({ collector }) => {
   return (
     <footer className={styles.body}>
-      <NavLink
-        to="/home"
-        className={({ isActive }) =>
-          isActive ? `${styles.nav} ${styles.active}` : styles.nav
-        }
-      >
-        <Home />
-      </NavLink>
-      <NavLink
-        to="/book"
-        className={({ isActive }) =>
-          isActive ? `${styles.nav} ${styles.active}` : styles.nav
-        }
-      >
-        <Book />
-      </NavLink>
+      {collector ? (
+        <>
+          <NavLink
+            to="/home"
+            className={({ isActive }) =>
+              isActive ? `${styles.nav} ${styles.active}` : styles.nav
+            }
+          >
+            <Home />
+          </NavLink>
+          <NavLink
+            to="/publish-routes"
+            className={({ isActive }) =>
+              isActive ? `${styles.nav} ${styles.active}` : styles.nav
+            }
+          >
+            <Book />
+          </NavLink>
+        </>
+      ) : (
+        <>
+          <NavLink
+            to="/home"
+            className={({ isActive }) =>
+              isActive ? `${styles.nav} ${styles.active}` : styles.nav
+            }
+          >
+            <Home />
+          </NavLink>
+          <NavLink
+            to="/view-routes"
+            className={({ isActive }) =>
+              isActive ? `${styles.nav} ${styles.active}` : styles.nav
+            }
+          >
+            <Book />
+          </NavLink>
+        </>
+      )}
       <NavLink
         to="/phone"
         className={({ isActive }) =>
@@ -42,7 +65,6 @@ const Footer = () => {
       >
         <Info />
       </NavLink>
-
     </footer>
   );
 };
