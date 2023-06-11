@@ -1,0 +1,31 @@
+.pageWrapper{
+    background: #FFFFFF;
+    border-radius: 18px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 4vh;
+    width: 99vw;
+    height: 100vh;
+}
+
+.text{
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 36px;
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.04em;
+    
+    /* primary-black */
+    
+    color: #2A2A2A;
+}
+
+.greyText {
+    font-size: 16px;
+    font-weight: 600;
+    color: #9E9E9E
+}
