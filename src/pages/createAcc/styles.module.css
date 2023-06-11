@@ -65,7 +65,41 @@
     font-size: 0.8rem;
     gap: 0.3rem;
 }
+.inputContainer{
+    width: 100vw;
+    height: 9rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
 .signUp{
     color: var(--green-light);
     text-decoration: none;
+}
+.line{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+}
+.subline{
+    width: 22%;
+    border-bottom: 0.1px solid #666666;
+}
+.or{
+    margin: 0.2rem;
+    margin-right: 1rem;
+    margin-left: 1rem;
+}
+.socials{
+    width: 100vw;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem
+
 }

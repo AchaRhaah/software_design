@@ -1,0 +1,32 @@
+.mainConatiner{
+    width: 95%;
+    height: 5rem;
+    display: flex;
+    border-radius: 1rem;
+box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+}
+.left{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 80%;
+    height: 100%;
+    padding-left: 1rem;
+
+}
+.city{
+    color: #9E9E9E;
+}
+.iconContainer{
+    width: 15%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.icon{
+    font-size: 1.2rem;
+    color: #9E9E9E;
+}
+.footer{
+    width: 100%;
+}
