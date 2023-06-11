@@ -19,7 +19,7 @@ const Footer = () => {
         <Home />
       </NavLink>
       <NavLink
-        to="/book"
+        to="/publish-routes"
         className={({ isActive }) =>
           isActive ? `${styles.nav} ${styles.active}` : styles.nav
         }
@@ -42,7 +42,6 @@ const Footer = () => {
       >
         <Info />
       </NavLink>
-
     </footer>
   );
 };

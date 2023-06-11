@@ -34,7 +34,7 @@ function CreateAcc() {
         <PasswordInput />
       </div>
       <Checkboxes />
-      <GreenBtn text={"Sign up"} />
+      <GreenBtn text={"Sign up"} link={"home"} />
       <div className={styles.line}>
         <div className={styles.subline} />
         <p className={styles.or}>or contine with</p>

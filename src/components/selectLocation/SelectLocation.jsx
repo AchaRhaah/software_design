@@ -6,11 +6,13 @@ function SelectLocation() {
     <div className={styles.mainContainer}>
       <div className={styles.topContainer}>
         <h5 className={styles.selectLocation}>Select Location</h5>
-        <input
-          className={styles.input}
-          placeholder="Kiki mini cite malingo Buea"
-          type="text"
-        />
+        <div>
+          <input
+            className={styles.input}
+            placeholder="Kiki mini cite malingo Buea"
+            type="text"
+          />
+        </div>
       </div>
       <button className={styles.savedBtn}>Saved</button>
     </div>
