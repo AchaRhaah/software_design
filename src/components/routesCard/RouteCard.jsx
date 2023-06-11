@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faTrashCan } from "@fortawesome/free-solid-svg-icons";
 
-function RouteCard({ place, city, deleteLoc }) {
+function RouteCard({ place, city, deleteLoc, customerView }) {
   return (
     <div className={styles.mainConatiner}>
       <div className={styles.left}>
@@ -12,7 +12,7 @@ function RouteCard({ place, city, deleteLoc }) {
       </div>
       <div className={styles.iconContainer}>
         {/* <FontAwesomeIcon className={styles.icon} icon={faPen} /> */}
-        <FontAwesomeIcon className={styles.icon} icon={faTrashCan} onClick={deleteLoc}/>
+        {!customerView && <FontAwesomeIcon className={styles.icon} icon={faTrashCan} onClick={deleteLoc}/>}
       </div>
     </div>
   );

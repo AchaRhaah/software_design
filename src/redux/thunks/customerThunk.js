@@ -62,13 +62,13 @@ export const fetchCustomerSubscriptions = createAsyncThunk(
 
 export const loginCustomer = createAsyncThunk(
     'customers/login',
-    async (phone_number, password) => {
+    async ({phone_number, password}) => {
         try {
-            const { customers } = await Post.loginCustomer({phone_number, password});
-            if(!customers.length) throw new Error('Incorrect Credentials');
-            const customer = customers[0];
+            const { customer } = await Post.loginCustomer({phone_number, password});
+            if(!customer.length) throw new Error('Incorrect Credentials');
+            const fcustomer = customer[0];
 
-            return customer;
+            return fcustomer;
         } catch {
             return { status: 400 }
         }

@@ -30,11 +30,21 @@ function CreateAcc() {
       delete userDetails.address;
       delete userDetails.isCollector
       if(isCollector){
-        dispatch(addCollectorThunk(userDetails)).then(() => {
+        dispatch(addCollectorThunk(userDetails)).then((res) => {
+          if(res.payload.status === 400){
+            alert('Please Enter all Fields');
+          }else{
+            navigate('/login')
+          }
           dispatch(setLoading(false))
         })
       }else{
-        await dispatch(addCustomerThunk(userDetails)).then(() => {
+        await dispatch(addCustomerThunk(userDetails)).then((res) => {
+          if(res.payload.status === 400){
+            alert('Please Enter all Fields');
+          }else{
+            navigate('/login')
+          }
           dispatch(setLoading(false))
         })
       }

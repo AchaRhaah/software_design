@@ -6,7 +6,8 @@
     border-radius: 0.2rem;
     padding-top: 1rem;
     padding-right: 1rem;
-    margin-top: 2rem;
+    margin-top: 2rem !important;
+    margin: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .topContainer{

@@ -37,7 +37,13 @@ function Login() {
           dispatch(setLoading(false))
         })
       }else{
-        await dispatch(loginCustomer(userDetails)).then(() => {
+        await dispatch(loginCustomer(userDetails)).then((res) => {
+          if(res.payload.status === 400){
+            alert('Wrong Credentials');
+          }else{
+            navigate('/home')
+          }
+
           dispatch(setLoading(false))
         })
       }

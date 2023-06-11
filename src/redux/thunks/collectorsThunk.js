@@ -127,9 +127,9 @@ export const fetchAllCollectors = createAsyncThunk(
   "collectors/fetchAll",
   async () => {
     try {
-      const { collectors } = await Post.getAllCollectors();
+      const { collector } = await Post.getAllCollectors();
 
-      return collectors;
+      return collector;
     } catch {
       return { status: 400 };
     }
