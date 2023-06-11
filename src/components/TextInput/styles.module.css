@@ -13,14 +13,14 @@
     color: #949393;
 }
 .input{
-    background: #FAFAFA;
-    width: 85%;
-   border: none;
-   outline: none;
-   color: #212121;
-   font-size:0.9rem;
+     background: #FAFAFA;
+     width: 95%;
+    border: none;
+    outline: none;
+    color: #212121;
+    font-size:0.9rem;
 }
 
 .input::placeholder {
-   color: #949393;
+    color: #949393;
 }

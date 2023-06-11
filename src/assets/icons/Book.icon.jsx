@@ -16,9 +16,9 @@ const Book = ({ size = 28 }) => {
       <path
         d="M7.66667 7.66667H21M7.66667 14.3333H21M7.66667 21H14.3333M27.6667 31V4.33333C27.6667 3.44928 27.3155 2.60143 26.6904 1.97631C26.0652 1.35119 25.2174 1 24.3333 1H4.33333C3.44928 1 2.60143 1.35119 1.97631 1.97631C1.35119 2.60143 1 3.44928 1 4.33333V31L5.16667 27.6667L10.1667 31L14.3333 27.6667L18.5 31L23.5 27.6667L27.6667 31Z"
         stroke="currentColor"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
+        strokeWidth="2"
+        strokeLinecap="round"
+        strokeLinejoin="round"
       />
     </svg>
   );

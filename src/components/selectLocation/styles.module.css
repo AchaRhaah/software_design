@@ -6,7 +6,8 @@
     border-radius: 0.2rem;
     padding-top: 1rem;
     padding-right: 1rem;
-    margin-top: 2rem;
+    margin-top: 2rem !important;
+    margin: auto;
     box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
 }
 .topContainer{
@@ -28,10 +29,9 @@
     height: 2rem;
     border-radius: 0.2rem;
     border: 1px solid var(--green-light);
-}
-.input::placeholder{
     padding-left: 12px;
 }
+
 .savedBtn{
     width: 50%;
     height: 2.5rem;

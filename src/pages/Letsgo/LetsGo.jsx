@@ -26,9 +26,9 @@ function LetsGo() {
           <p className={styles.or}>or</p>
           <div className={styles.subline} />
         </div>
-        <GreenBtn link={"create-account"} text={"Sign in with password"} />
+        <GreenBtn onPress={() => navigate('/create-account')} text={"Sign in with password"} />
         <p className={styles.name}>
-          Don't have an account? <Link className={styles.signUp}> Sign up</Link>
+          Don't have an account? <Link className={styles.signUp} to='/create-account'> Sign up</Link>
         </p>
       </div>
     </>

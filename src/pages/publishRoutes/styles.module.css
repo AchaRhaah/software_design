@@ -42,3 +42,9 @@
     margin-top: 3rem;
     align-self: flex-start;
 }
+
+.save {
+    position: fixed;
+    bottom: 10%;
+    right: 1.2rem;
+}

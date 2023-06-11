@@ -16,7 +16,7 @@ const CollectorCard = ({name, collector_id}) => {
     const image = images[(Math.round(Math.random()*10)%4)]
 
   return (
-    <div className={styles.body} onClick={() => navigate(`/collector/${collector_id}`)}>
+    <div className={styles.body} onClick={() => navigate(`/view-routes/${collector_id}`)}>
         <img className={styles.image} src={image} />
         <h5 className={styles.name}>{name}</h5>
     </div>
